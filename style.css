@@ -259,7 +259,7 @@ nav .fas{
 }
 @media only screen and (max-width: 600px) {
     #header{
-        background-image: url();
+        background-image: url(Foto.jpg);
     }
     .header-text{
         margin-top: 100%;
