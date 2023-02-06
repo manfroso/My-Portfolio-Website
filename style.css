@@ -126,9 +126,11 @@ nav ul li a:hover::after{
     width: 50%;
 }
 .tab-contents ul li{
-    list-style: none;
-    margin: 10px 0;
+    list-style: circle;
+    margin: 10px 0; 
+    transition-duration: 1s;
 }
+
 .tab-contents ul li span{
     color: #ff0000;
     font-size: 18px;
@@ -140,7 +142,27 @@ nav ul li a:hover::after{
     display: block;
 }
 
-/*........serveces------*/
+@keyframes slidedown {
+    from{
+        transform: translateY(-30px);
+        max-height: 0;
+        overflow: visible;
+        transition: max-height 0s ease-out;
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        max-height: 500;
+        opacity: 1;
+    }
+}
+
+.tab-contents{
+    animation-name: slidedown;
+    animation-duration: 2.5s;
+    
+}   
+/*........services------*/
 #services{
     padding: 30px 0;
 }
