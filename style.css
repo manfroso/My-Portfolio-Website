@@ -62,7 +62,8 @@ nav ul li a:hover::after{
 }
 
 .header-text{
-    margin-top: 20%;
+    margin-top: 16%;
+    margin-left: 63%;
     font-size: 30px;
 }
 .header-text h1{
@@ -334,4 +335,88 @@ nav .fas{
     .contact-left, .contact-right{
         flex-basis: 100%;
     }
+}
+
+/*Unipage*/
+#sub-header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.801),rgba(0, 0, 0, 0.664)),url(Polimi.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.sub-header h2{
+    font-size: 50px;
+    padding: 20px;
+    margin-top: 200px;
+}
+
+.uni-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(50px,1fr));
+    grid-gap: 60px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius:10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width:100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0, 0, 0, 0.814),#ff0707);
+    border-radius: 10px;
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-self: center;
+    justify-content:center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.button{
+    margin: 10px auto;
+    width: fit-content;
+    border-radius: 6px;
+    border: 1px solid #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background 1s;
+}
+
+.button:hover{
+    background: #000000;
 }
