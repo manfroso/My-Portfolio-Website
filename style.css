@@ -104,27 +104,38 @@ nav ul li a:hover::after{
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
+    font-size: larger;
 }
 
 .tab-links{
+    color: #fff;
     margin-right: 50px;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 500;
+    font-style: bold;
     cursor: pointer;
     position: relative;
+}
+
+.tab-links:hover::after{
+    width: 10%;
+    color: #ff0000;
+    
 }
 .tab-links::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ffffff;
+    background: #fe0101;
     position: absolute;
     left: 0;
-    bottom: -8px;
+    bottom: -8px;   
     transition: 0.5s;
 }
 .tab-links.active-link::after{
-    width: 50%;
+    width: 100%;
+    color: #ff0000;
+    transition: 2s;
 }
 .tab-contents ul li{
     list-style: circle;
@@ -200,10 +211,6 @@ nav ul li a:hover::after{
 .services-list div:hover{
     background: #ff0707;
     transform: translateY(-10px);
-}
-/*portfolio*/
-#portfolio{
-    padding: 50px 0;
 }
 
 /*contact*/

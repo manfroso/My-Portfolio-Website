@@ -16,7 +16,6 @@
             <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <i class = "fas fa-times" onclick="closemenu()"></i>
             </ul>
@@ -37,80 +36,36 @@
            </div> 
            <div class="about-col-2">
             <h1 class = "sub-title"> About Me</h1>
-            <p>Hello, my name is Riccardo Manfredonia, I am a 23-year-old guy with a passion for computer science and an interest in
-            the continuous improvement of technology. <p></p>
-            I live in Legnano, in the province of Milan, and I am studying Computer Engineering at the Polytechnic of Milan. <p></p>
-            Welcome to my website, here I show who I am, my interests, my projects, and my passions. <p></p>
-            Take a look around!</p>
+            <p> 
+                <strong> <p>Hi, I am Riccardo Manfredonia , a 24yo born in Legnano, Italy, in the year 2000. </p>
+                <p>My academic journey led me through the corridors of a scientific high school, fostering a deep-rooted interest in the world of computer science.</p>
+                Currently, I am on the verge of completing my studies at the Polytechnic of Milan, majoring in Computer Science Engineering.
+                <p></p>I find great joy in exploring the intricacies of technology, driven by a fervent passion for its continuous evolution.
+                <p></p>This website serves as a digital canvas, providing a glimpse into my identity, interests, projects, and aspirations.
+                <p></p>Thank you for visiting, feel free to explore and discover more about my endeavors.
+                </strong>
+            </p>
 
             <div class="tab-titles">
-                <p class ="tab-links active-link" onclick = "opentab('skills')">Skills</p>
-                <p class="tab-links" onclick = "opentab('experience')">Experience</p>
-                <p class="tab-links" onclick = "opentab('education')">Education</p>
+                <p class ="tab-links active-link" onclick = "opentab('education')"> Education</p>
+                <p class="tab-links" onclick = "opentab('courses')">Courses</p>
+                <p class="tab-links" onclick = "opentab('project')">Project</p>
             </div>
-            <div class="tab-contents active-tab" id = "skills">
-                <ul>
-                    <li><span>C/C++</span><br>Learned in Computer Science Fundamentals</li>
-                    <li><span>Java</span><br>Learned in Software Engineering 1</li>
-                    <li><span>HTML/CSS</span><br>Learned by myself </li>
-                </ul>
+
+            <div id = "tab-contents">
+                <h3 style="color: white; margin-top: 20px; font-weight: bold;">Polytechnic of Milan</h3>
+                <p style="color: grey; margin-top: 20px; margin-bottom: 40px; font-style: italic;">Bachelor's degree in Computer Science Engineering (2019-2024)</p>
+                <h3 style="color: white; font-style: italic;">Galileo Galilei High School</h3>
+                <p style="color: grey;margin-top: 20px; margin-bottom: 20px; font-style: italic;">Scientific High School Diploma (2014-2019)</p>
+
             </div>
-            <div class="tab-contents" id = "experience">
-                <ul>
-                    <li><span>IBM</span><br>2-week internship in the advanced robotics department, using Node.js</li>
-                    <li><span>Robotics</span><br></li>
-                    <li><span>ICDL Management</span><br>2017</li>
-                </ul>
-            </div>
-            <div class="tab-contents" id = "education">
-                <ul>
-                    <li><span>Polytechnic of Milan.</span><br>Computer Engineering</li>
-                    <li><span>Scientific high school</span><br></li>
-                    <li><span>English Level</span><br>B2</li>
-                </ul>
-            </div>
+
            </div> 
         </div>
     </div>
 </div>
 <!-------------services------------>
-<div id = "services">
-    <div class="container">
-        <h1 class = "sub-title">My Services</h1>
-        <div class = "services-list">
-            <div>
-                <i class="fa-solid fa-building-columns"></i>
-                <h2>Uni File</h2>
-                <p>All my file about Polytechnic of Milan</p>
-                <a href="https://www.notion.so/riccardomanfredonia/Politecnico-di-Milano-50f21a0ee83f46e2b07182b049eb5890?pvs=4">View more</a>
-            </div>
-            <div>
-                <i class="fa-sharp fa-solid fa-file"></i>
-                <h2>Project</h2>
-                <p>All my little project done by myself </p>
-                <a href="#">Soon</a>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!------------------portfolio--------------
-<div id = portfolio>
-    <div class = "conteiner">
-        <h1 class = "sub-title">My Work</h1>
-        <div class = "work-list">
-            <div class = "work">
-                <img src="">
-            </div>
-            <div class="work">
-                <img src="">
-            </div>
-            <div class="work">
-                <img src="">
-            </div>
-        </div>
-    </div>
-</div>--->
 
 <!------------contact------------->
 <div id = "contact">
@@ -123,7 +78,7 @@
                 <div class = "social-icons">
                     <a href="https://github.com/manfroso"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.instagram.com/manfrecardo/?next=%2F"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/riccardo-manfredonia-342b9b191/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/in/riccardo-manfredonia-92b0492a1/"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 
             </div>
@@ -134,20 +89,145 @@
 
 
 <script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementById("tab-contents");   
 
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
+        function opentab(tabname) {
+                          
+            var tabLinks = document.getElementsByClassName("tab-links");
+            for (var i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].classList.remove("active-link");
+            }
+            event.currentTarget.classList.add("active-link");
 
-    }
+            if (tabname == "education") {
+
+                tabcontents.innerHTML = "";
+
+                var h3 = document.createElement("h3");
+                h3.innerHTML = "Polytechnic of Milan";
+                h3.style.color = "white";
+                h3.style.marginTop = "20px";
+                h3.style.fontStyle = "bold";
+                var br1 = document.createElement("br");
+                var p = document.createElement("p");
+                p.innerHTML = "Bachelor's degree in Computer Science Engineering  (2019-2024)";
+                p.style.color = "grey";
+                p.style.marginBottom = "20px";
+                p.style.fontStyle = "italic";
+                var br2 = document.createElement("br");
+                var h3_2 = document.createElement("h3");
+                h3_2.innerHTML = "Galileo Galilei High School";
+                h3_2.style.color = "white";
+                h3_2.style.fontStyle = "italic";
+                var br3 = document.createElement("br");
+                var p_2 = document.createElement("p");
+                p_2.innerHTML = "Scientific High School Diploma  (2014-2019)";
+                p_2.style.color = "grey";
+                p_2.style.marginBottom = "20px";
+                p_2.style.fontStyle = "italic";
+
+                tabcontents.appendChild(h3);
+                tabcontents.appendChild(br1);
+                tabcontents.appendChild(p);
+                tabcontents.appendChild(br2);
+                tabcontents.appendChild(h3_2);
+                tabcontents.appendChild(br3);
+                tabcontents.appendChild(p_2);
+            }
+            else if(tabname == "courses") {
+
+                tabcontents.innerHTML = "";
+
+                var h3 = document.createElement("h3");
+                h3.innerHTML = "Programming Foundations with JavaScript, HTML and CSS";
+                h3.style.color = "white";
+                h3.style.marginTop = "20px";
+                h3.style.fontStyle = "bold";
+                var br1 = document.createElement("br");
+                var p = document.createElement("p");
+                p.innerHTML = "Duke University (2024) - Coursera";
+                p.style.color = "grey";
+                p.style.marginBottom = "20px";
+                p.style.fontStyle = "italic";
+                var br2 = document.createElement("br");
+                var h3_2 = document.createElement("h3");
+                h3_2.innerHTML = "Java Programming: Solving Problems with Software";
+                h3_2.style.color = "white";
+                h3_2.style.fontStyle = "italic";
+                var br3 = document.createElement("br");
+                var p_2 = document.createElement("p");
+                p_2.innerHTML = "Duke University (2024) - Coursera";
+                p_2.style.color = "grey";
+                p_2.style.marginBottom = "20px";
+                p_2.style.fontStyle = "italic";
+
+                tabcontents.appendChild(h3);
+                tabcontents.appendChild(br1);
+                tabcontents.appendChild(p);
+                tabcontents.appendChild(br2);
+                tabcontents.appendChild(h3_2);
+                tabcontents.appendChild(br3);
+                tabcontents.appendChild(p_2);
+            }
+            else if(tabname == "project") {
+
+                tabcontents.innerHTML = "";
+
+                var a = document.createElement("a");
+                a.innerHTML = "Software Engineering Project";
+                a.href = "https://github.com/MarcoMeinardi/ing-sw-2023-Maltagliati-Manfredonia-Meinardi-Merlino";
+                a.style.color = "white";
+                a.style.fontSize = "20px";
+                a.style.marginTop = "20px";
+                a.style.fontWeight = "bold";
+                var br1 = document.createElement("br");
+                var p1 = document.createElement("p");
+                p1.innerHTML = "MyShelfie (2023)";
+                p1.style.color = "grey";
+                p1.style.fontStyle = "italic";
+                var br2 = document.createElement("br");
+                var p2 = document.createElement("p");
+                p2.innerHTML = "Java, JavaFX, GitHub Actions";
+                p2.style.color = "grey";
+                p2.style.marginBottom = "20px";
+                p2.style.marginTop = "-20px";
+                p2.style.fontStyle = "italic";
+
+                var a2 = document.createElement("a");
+                a2.innerHTML = "Web Development Project (TIW 2023)";
+                a2.href = "https://github.com/manfroso/TIW-2022";
+                a2.style.color = "white";
+                a2.style.fontSize = "20px";
+                a2.style.marginTop = "10px";
+                a2.style.fontStyle = "bold";
+                var br3 = document.createElement("br");
+                var p3 = document.createElement("p");
+                p3.innerHTML = "Student and Teacher Portal";
+                p3.style.color = "grey";
+                p3.style.fontStyle = "italic";
+                var br4 = document.createElement("br");
+                var p4 = document.createElement("p");
+                p4.innerHTML = "HTML, CSS, JavaScript, Java, MySQL";
+                p4.style.color = "grey";
+                p4.style.fontStyle = "italic";
+                p4.style.marginTop = "-15px";
+
+
+                tabcontents.appendChild(a);
+                tabcontents.appendChild(br1);
+                tabcontents.appendChild(p1);
+                tabcontents.appendChild(br2);
+                tabcontents.appendChild(p2);
+                tabcontents.appendChild(a2);
+                tabcontents.appendChild(br3);
+                tabcontents.appendChild(p3);
+                tabcontents.appendChild(br4);
+                tabcontents.appendChild(p4);
+            
+             }
+
+} 
    
 
 </script>
