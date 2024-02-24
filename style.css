@@ -37,6 +37,7 @@ nav ul li{
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
+    text-shadow: 2px 2px 2px #000000;
 }
 
 nav ul li a{
@@ -69,6 +70,12 @@ nav ul li a:hover::after{
 .header-text h1{
     font-size: 60px;
     margin-top: 20px;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+.htext {
+    font-style: italic;
+    text-shadow: 2px 2px 2px #000000;
 }
 
 .header-text h1 span{
