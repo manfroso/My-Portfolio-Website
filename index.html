@@ -64,10 +64,8 @@
         </div>
     </div>
 </div>
-<!-------------services------------>
 
 
-<!------------contact------------->
 <div id = "contact">
     <div class="container">
         <div class="row">
@@ -161,6 +159,27 @@
                 p_2.style.color = "grey";
                 p_2.style.marginBottom = "20px";
                 p_2.style.fontStyle = "italic";
+                var h3_3 = document.createElement("h3");
+                h3_3.innerHTML = "Applied Data Science with Python";
+                h3_3.style.color = "white";
+                h3_3.style.fontStyle = "italic";
+                var br4 = document.createElement("br");
+                var p_3 = document.createElement("p");
+                p_3.innerHTML = "University of Michigan (2024) - Coursera";
+                p_3.style.color = "grey";
+                p_3.style.marginBottom = "20px";
+                p_3.style.fontStyle = "italic";
+                var h3_4 = document.createElement("h3");
+                h3_4.innerHTML = "Applied Machine Learning in Python";
+                h3_4.style.color = "white";
+                h3_4.style.fontStyle = "italic";
+                var br5 = document.createElement("br");
+                var p_4 = document.createElement("p");
+                p_4.innerHTML = "University of Michigan (2024) - Coursera";
+                p_4.style.color = "grey";
+                p_4.style.marginBottom = "20px";
+                p_4.style.fontStyle = "italic";
+                
 
                 tabcontents.appendChild(h3);
                 tabcontents.appendChild(br1);
@@ -169,6 +188,13 @@
                 tabcontents.appendChild(h3_2);
                 tabcontents.appendChild(br3);
                 tabcontents.appendChild(p_2);
+                tabcontents.appendChild(h3_3);
+                tabcontents.appendChild(br4);
+                tabcontents.appendChild(p_3);
+                tabcontents.appendChild(h3_4);
+                tabcontents.appendChild(br5);
+                tabcontents.appendChild(p_4);
+        
             }
             else if(tabname == "project") {
 
@@ -211,7 +237,28 @@
                 p4.innerHTML = "HTML, CSS, JavaScript, Java, MySQL";
                 p4.style.color = "grey";
                 p4.style.fontStyle = "italic";
-                p4.style.marginTop = "-15px";
+                p4.style.marginTop = "-20px";
+                p4.style.marginBottom = "20px";
+
+                var a3 = document.createElement("a");
+                a3.innerHTML = "Milan Airbnb Prediction"; 
+                a3.href = "https://jupyter.org/try-jupyter/notebooks/index.html?path=MilanAirbnbPrediction.ipynb"; 
+                a3.style.color = "white";
+                a3.style.fontSize = "20px";
+                a3.style.marginTop = "10px";
+                a3.style.fontStyle = "bold";
+                var br5 = document.createElement("br");
+                var p5 = document.createElement("p");
+                p5.innerHTML = "Data Analysis and Prediction";
+                p5.style.color = "grey";
+                p5.style.fontStyle = "italic";
+                var br6 = document.createElement("br");
+                var p6 = document.createElement("p");
+                p6.innerHTML = "Python, Jupyter Notebook, Pandas, Numpy, Scikit-learn";
+                p6.style.color = "grey";
+                p6.style.fontStyle = "italic";
+                p6.style.marginTop = "-15px";
+            
 
 
                 tabcontents.appendChild(a);
@@ -224,7 +271,11 @@
                 tabcontents.appendChild(p3);
                 tabcontents.appendChild(br4);
                 tabcontents.appendChild(p4);
-            
+                tabcontents.appendChild(a3);
+                tabcontents.appendChild(br5);
+                tabcontents.appendChild(p5);
+                tabcontents.appendChild(br6);
+                tabcontents.appendChild(p6);
              }
 
 } 
